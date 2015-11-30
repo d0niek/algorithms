@@ -10,5 +10,5 @@ fi
 
 for i in `seq 0 $number`; do
     /usr/bin/time -f "test $i: %e" ./$path/$name < "$path/tests/test$i.in" > "$out/test$i.out";
-    diff -wq "$path/tests/test$i.out" "$out/test$i.out";
+    diff -wqB "$path/tests/test$i.out" "$out/test$i.out";
 done;
