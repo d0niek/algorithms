@@ -4,6 +4,7 @@
 using namespace std;
 
 #define LL long long
+#define SIZE(x) (int) x.size()
 
 int main()
 {
