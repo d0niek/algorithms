@@ -10,5 +10,5 @@ touch $path/$name/tests/test0.in;
 touch $path/$name/tests/test0.out;
 
 if [ ! -f $path/$name/$name.cpp ]; then
-    cp ./template.cpp $path/$name/$name.cppx;
+    cp ./template.cpp $path/$name/$name.cpp;
 fi
