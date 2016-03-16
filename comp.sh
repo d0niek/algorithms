@@ -2,4 +2,4 @@
 path=$1
 name=$2
 
-g++ $path/$name.cpp -o $path/$name -Wall -O2
+g++ $path/$name/$name.cpp -o $path/$name/$name -Wall -O2
