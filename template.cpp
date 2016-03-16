@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -5,6 +6,7 @@ using namespace std;
 
 #define LL long long
 #define SIZE(x) (int) x.size()
+#define PB(x) push_back(x)
 
 int main()
 {
