@@ -31,7 +31,7 @@ $ ./comp.sh path/to/app app_name
 Jeśli nie będzie błędów kompilacji zostanie utwórzony plik wykonywalny **path/to/app/app_name/app_name**
 
 # Testing
-W folderze **tests** znajdują się pliki testowe **test0.in** (dane wejściowe) oraz **test0.out** (oczekiwany rezultat po wykonaniu programu). Jeśli chcesz dodać więcej testów utwórz w folderze pary plików ***.in** oraz ***.out**
+W folderze **tests** znajdują się pliki testowe **test0.in** (dane wejściowe) oraz **test0.out** (oczekiwany rezultat po wykonaniu programu). Jeśli chcesz dodać więcej testów utwórz w folderze pary plików **\*.in** oraz **\*.out**
 ```sh
 $ touch path/to/app/app_name/tests/test1.in
 $ touch path/to/app/app_name/tests/test1.out
@@ -57,6 +57,6 @@ Kiedy pliki testowe są już gotowe uruchom polecenie
 ```sh
 $ ./test.sh path/to/app app_name
 ```
-Polecenie to uruchomi napisany przez Ciebie program z każdym testem wejściowym ***.in**, zapisze rezultat do pliku **path/to/app/app_name/out/\*.out** i porówna go z oczekiwanym rezultatem.
+Polecenie to uruchomi napisany przez Ciebie program z każdym testem wejściowym **\*.in**, zapisze rezultat do pliku **path/to/app/app_name/out/\*.out** i porówna go z oczekiwanym rezultatem.
 
-Jednocześnie dla każdego testu zostanie również wypisany czas wykonania programu oraz ilość pamięci jaką zużył podaną w Kb.
+Jednocześnie dla każdego testu zostanie wypisany czas wykonania programu oraz ilość pamięci [Kb] jaką zużył.
