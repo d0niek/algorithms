@@ -1,14 +1,14 @@
 #/bin/bash
 path=$1
-name=$2
 
-if [ ! -d $path/$name/tests ]; then
-    mkdir -p $path/$name/tests;
+if [ ! -d $path/tests ]; then
+    mkdir -p $path/tests;
 fi
 
-touch $path/$name/tests/test0.in;
-touch $path/$name/tests/test0.out;
+touch $path/tests/test0.in;
+touch $path/tests/test0.out;
 
-if [ ! -f $path/$name/$name.cpp ]; then
-    cp ./template.cpp $path/$name/$name.cpp;
+if [ ! -f $path/main.cpp ]; then
+    cp ./template.cpp $path/main.cpp;
 fi
+
