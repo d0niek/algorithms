@@ -1,6 +1,8 @@
 /*
-!.gitignore
-!start.sh
-!comp.sh
-!test.sh
-!template.cpp
+!/.gitignore
+!/comp
+!/LICENSE
+!/README.md
+!/template.*
+!/start
+!/test

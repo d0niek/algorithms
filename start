@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+path=${1:?}
+if [[ ! -d "$path"/tests ]]; then
+    mkdir -p "$path/tests"
+fi
+echo 2 > "$path/tests/test.in"
+echo 2 > "$path/tests/test.out"
+extension=${2:?}
+if [[ ! -f "$path/main.$extension" ]]; then
+    cp "./template.$extension" "$path/main.$extension"
+    chmod +x "$path/main.$extension"
+    ln -s "main.$extension" "$path/app"
+fi
