@@ -1,6 +1,6 @@
 # Bash scripts for algorithms testing
 
-How to start
+Start
 ------------
 Ściągnij repozytorium i wypakuj je w dowolnym miejscu. W razie potrzeby zedytuj plik szablonu **template.\*** według własnego uznania.
 
@@ -18,8 +18,8 @@ path
         ├── app
         ├── main.extension
         └── tests
-            ├── test0.in
-            └── test0.out
+            ├── test.in
+            └── test.out
 ```
 
 W tym momencie w wybranym przez siebie edytorze przystąp do edycji pliku **path/to/program/main.extension**.
@@ -32,7 +32,7 @@ $ ./comp path/to/program extension
 gdzie **extension** powinno być takie samo jak przy wywołaniu `start`.
 Jeśli nie będzie błędów kompilacji (w przypadku **C++**) zostanie utwórzony plik wykonywalny **path/to/program/app**.
 
-# Testing
+# Test
 W folderze **path/to/program/tests** znajdują się pliki testowe **test.in** (dane wejściowe) oraz **test.out** (oczekiwany rezultat po wykonaniu programu). Jeśli chcesz dodać więcej testów utwórz w folderze pary plików **\*.in** oraz **\*.out**
 ```sh
 $ touch path/to/program/tests/test1.in
