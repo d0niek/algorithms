@@ -22,14 +22,15 @@ path
             └── test0.out
 ```
 
-W tym momencie w wybranym przez siebie edytorze przystąp do edycji pliku **path/to/program/main.extension**
+W tym momencie w wybranym przez siebie edytorze przystąp do edycji pliku **path/to/program/main.extension**.
 
 # Compile
-Jeśli zdecydowałeś się na pisanie programu w języku C++ to przed jego uruchomieniem musisz go skompliować. Wydaj polecenie:
+Po zakończeniu edycji pliku **path/to/program/main.extension** należy go skompilować. W przypadku pisania programu w języku **Php** wystarczy to zrobić raz, w przypadku pisania programu w języku **C++** należy go skompilować po każdej edycji. Wydaj polecenie:
 ```sh
-$ ./comp path/to/program
+$ ./comp path/to/program extension
 ```
-Jeśli nie będzie błędów kompilacji zostanie utwórzony plik wykonywalny **path/to/program/app**
+gdzie **extension** powinno być takie samo jak przy wywołaniu `start`.
+Jeśli nie będzie błędów kompilacji (w przypadku **C++**) zostanie utwórzony plik wykonywalny **path/to/program/app**.
 
 # Testing
 W folderze **path/to/program/tests** znajdują się pliki testowe **test.in** (dane wejściowe) oraz **test.out** (oczekiwany rezultat po wykonaniu programu). Jeśli chcesz dodać więcej testów utwórz w folderze pary plików **\*.in** oraz **\*.out**

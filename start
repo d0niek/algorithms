@@ -1,14 +1,18 @@
 #!/usr/bin/env bash
 
 path=${1:?}
+extension=${2:?}
+extensions=("cpp" "php")
+is_extension_support=$(echo "${extensions[@]}" | grep -wc "$extension")
+if [[ $is_extension_support -eq 0 ]]; then
+    echo "Unsupported extension $extension"
+    exit 1
+fi
 if [[ ! -d "$path"/tests ]]; then
     mkdir -p "$path/tests"
+    echo 2 > "$path/tests/test.in"
+    echo 2 > "$path/tests/test.out"
 fi
-echo 2 > "$path/tests/test.in"
-echo 2 > "$path/tests/test.out"
-extension=${2:?}
 if [[ ! -f "$path/main.$extension" ]]; then
     cp "./template.$extension" "$path/main.$extension"
-    chmod +x "$path/main.$extension"
-    ln -s "main.$extension" "$path/app"
 fi

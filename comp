@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
 
 path=${1:?}
-g++ "$path/main.cpp" -o "$path/app" -Wall -std=c++11 -O2
+extension=${2:?}
+if [[ "$extension" == "php" ]]; then
+    rm "$path/app"
+    chmod +x "$path/main.php"
+    ln -s "main.php" "$path/app"
+elif [[ "$extension" == "cpp" ]]; then
+    g++ "$path/main.cpp" -o "$path/app" -Wall -std=c++11 -O2
+else
+    echo "Unsupported extension $extension"
+fi
